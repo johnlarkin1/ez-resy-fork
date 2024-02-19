@@ -17,6 +17,7 @@ if (token) {
     if (slots) {
       let bookToken = await getBookingConfig(slots);
       let booking = await makeBooking(bookToken);
+      console.log('booking', booking);
       if (booking.resy_token) {
         console.log(`You've got a reservation!`);
       } else {
